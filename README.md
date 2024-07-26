@@ -8,29 +8,37 @@ The study compares LLM-suggested optimizations with human-proposed ones, assesse
 ```
 RQ1/
     READMe.md
-    Dataset
+    Dataset/
+        entrypoints_no_crashes_only.csv
+        projects_filtered_top100stars.csv
 
 RQ2/
-  Optimization-results/
-    llama/reasoning.csv
-    mixtral/reasoning.csv
-    gpt-3/reasoning.csv
-    gpt-4/reasoning.csv
-    human/reasoning.csv
+  Optimization-reasonings/
+    llama_reasoning.csv
+    mixtral_reasoning.csv
+    gpt-3_reasoning.csv
+    gpt-4_reasoning.csv
+    human_reasoning.csv
+    Human-guidelines.txt
   Mappings
     LLM-themes.csv
     Human-themes.csv
   Analysis/
     EnergyThemes.py
+    EnergyOptimizationWithAnyScale.py
+    EnergyOptimizationWithChatGpt.py
 
 RQ3/
   Optimization-results/
-    llama/
-    mixtral
-    gpt-3/
-    gpt-4/
+    llama_optimization.csv
+    mixtral_optimization.csv
+    gpt-3_optimization.csv
+    gpt-4_optimization.csv
     human/
+    processed_results/
 Analysis/
+    EnergyProcessorStats.ipynb
+    EnergyOptimizationProcessor.py
 
 
 ```
@@ -41,11 +49,12 @@ Analysis/
 It contains the links to the top github repositories
 
 ### `RQ2/Optimization-results/`:
-`llama/reasoning.csv`: For llama, It contains the 400 files, with the original code, optimized code, the reasoning (optimization applied) for each file, and the themes extracted from each file. 
-`mixtral/reasoning.csv`: For mixtral, It contains the 400 files, with the original code, optimized code, the reasoning (optimization applied) for each file, and the themes extracted from each file. 
-`gpt-3/reasoning.csv`: For gpt-3, It contains the 400 files, with the original code, optimized code, the reasoning (optimization applied) for each file, and themes extracted from each file. 
-`gpt4/reasoning.csv`: For gpt-4, It contains the 400 files, with the original code, optimized code, the reasoning (optimization applied) for each file, and the themes extracted from each file. 
-`huamn/reasoning.csv`: For human optimization, It contains the 60 files, with the original code, optimized code, the reasoning (optimization applied) for each file, and the themes extracted from each file. 
+`llama_reasoning.csv`: For llama, It contains the 400 files, with the original code, optimized code, the reasoning (optimization applied) for each file, and the themes extracted from each file. 
+`mixtral_reasoning.csv`: For mixtral, It contains the 400 files, with the original code, optimized code, the reasoning (optimization applied) for each file, and the themes extracted from each file. 
+`gpt-3_reasoning.csv`: For gpt-3, It contains the 400 files, with the original code, optimized code, the reasoning (optimization applied) for each file, and themes extracted from each file. 
+`gpt-4_reasoning.csv`: For gpt-4, It contains the 400 files, with the original code, optimized code, the reasoning (optimization applied) for each file, and the themes extracted from each file. 
+`human_reasoning.csv`: For human optimization, It contains the 60 files, with the original code, optimized code, the reasoning (optimization applied) for each file, and the themes extracted from each file. 
+`Human-guidelines.txt`: The guidelines for energy optimization formed by the developer.
 
 ### `RQ2/Mappings`:
   `LLM-themes.csv`: Contains the themes extracted from all models and mapped with high-level themes.
@@ -53,9 +62,15 @@ It contains the links to the top github repositories
 
 ### `RQ2/Analysis`:
 `EnergyThemes.py`: Scripts used to extract themes from the optimization results, merge them together, and at the end plot the results used in the study.
+`EnergyOptimizationWithAnyScale.py`: Script to prompt the models (mixtral, and llama) and get the optimized code.
+`EnergyOptimizationWithChatGpt.py`: Script to prompt the models (gpt3, and gpt4) and get the optimized code.
 
 ### `RQ3/Optimization-results/`: 
-For each model, it contains the files sent to the models for the optimization. The optimized files are stored under the column "optimized-code". 
+For each model, it contains the files sent to the models for the optimization. The optimized files are stored under the column "optimized-code" in the csv files. 
+`human/`: Matlab files optimized by human
+`processed_results/averages_results.csv`: the results collected from the tool for each model and the baseline.
+
 
 ### `RQ3/Analysis`:
-`EnergyProcessor.py`: Scripts used to perform stastical tests.
+`EnergyProcessorStats.py`: Scripts used to perform stastical tests.
+`EnergyOptimizationProcessor.py`: Scripts used to process optimization results.
