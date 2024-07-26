@@ -72,5 +72,5 @@ For each model, it contains the files sent to the models for the optimization. T
 
 
 ### `RQ3/Analysis`:
-`EnergyProcessorStats.py`: Scripts used to perform stastical tests.
+`EnergyProcessorStats.ipynb`: Scripts used to perform stastical tests.
 `EnergyOptimizationProcessor.py`: Scripts used to process optimization results.
