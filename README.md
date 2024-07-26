@@ -1,4 +1,4 @@
-# Replication Package for ``Make Code Green: Evaluating Energy Optimization''
+# Replication Package for `Make Code Green: Evaluating Energy Optimization'
 This repository contains the replication package for the study `Make Code Green: Evaluating Energy Optimization`.
 This staud establishes an automated pipeline to measure the energy footprint of a large set of Matlab projects mined from GitHub, addressing the growing concern of energy consumption in scientific software systems.
 It evaluates whether recent Large Language Models (LLMs) like ChatGPT-3, ChatGPT-4, Mixtral, and LLama can reduce the energy footprints of these software systems, identifying and categorizing 2,176 optimizations suggested by the LLMs.
