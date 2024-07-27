@@ -17,9 +17,9 @@ RQ1/
 	Entry Point Scripts/
 		entryPoints.m
 		README.md
-    Dataset/
-        entrypoints_no_crashes_only.csv
-        projects_filtered_top100stars.csv
+	Dataset/
+		entrypoints_no_crashes_only.csv
+		projects_filtered_top100stars.csv
 		
 RQ2/
 	Optimization-reasonings/
