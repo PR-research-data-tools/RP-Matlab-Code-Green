@@ -6,49 +6,62 @@ The study compares LLM-suggested optimizations with human-proposed ones, assesse
 
 ## Structure
 ```
+READMe.md
 RQ1/
-    READMe.md
+	Curation Scripts/
+		clone.py
+		filter.py
+		refiner.py
+		sampler.py
+		README.md
+	Entry Point Scripts/
+		entryPoints.m
+		README.md
     Dataset/
         entrypoints_no_crashes_only.csv
         projects_filtered_top100stars.csv
-
+		
 RQ2/
-  Optimization-reasonings/
-    llama_reasoning.csv
-    mixtral_reasoning.csv
-    gpt-3_reasoning.csv
-    gpt-4_reasoning.csv
-    human_reasoning.csv
-    Human-guidelines.txt
-  Mappings
-    LLM-themes.csv
-    Human-themes.csv
-  Analysis/
-    EnergyThemes.py
-    EnergyOptimizationWithAnyScale.py
-    EnergyOptimizationWithChatGpt.py
+	Optimization-reasonings/
+		llama_reasoning.csv
+		mixtral_reasoning.csv
+		gpt-3_reasoning.csv
+		gpt-4_reasoning.csv
+		human_reasoning.csv
+		Human-guidelines.txt
+	Mappings
+		LLM-themes.csv
+		Human-themes.csv
+	Analysis/
+		EnergyThemes.py
+		EnergyOptimizationWithAnyScale.py
+		EnergyOptimizationWithChatGpt.py
 
 RQ3/
-  Optimization-results/
-    llama_optimization.csv
-    mixtral_optimization.csv
-    gpt-3_optimization.csv
-    gpt-4_optimization.csv
-    human/
-    processed_results/
-EnergiBridge-results/
-    output-human.zip
-    output-LLMs.zip
-Analysis/
-    EnergyProcessorStats.ipynb
-    EnergyOptimizationProcessor.py
-
+	Optimization-results/
+		llama_optimization.csv
+		mixtral_optimization.csv
+		gpt-3_optimization.csv
+		gpt-4_optimization.csv
+		human/
+		processed_results/
+	EnergiBridge-results/
+		output-human.zip
+		output-LLMs.zip
+	Analysis/
+		EnergyProcessorStats.ipynb
+		EnergyOptimizationProcessor.py
+	Correctness/
+		compareOutputs.m
+		two_scripts_are_same.m
+		compareOutput.csv
 ```
 
 ## Contents of the Replication Package
 ---
-###  `RQ1/Dataset`
-It contains the links to the top github repositories
+###  `RQ1`
+The subfolders `Curation Scripts` and `Entry Point Scripts` have their own `README.md` file for futher explanation.
+The scripts of these subfolder create the dataset in `Dataset`: a list of our 100 sampled GitHub projects and a list of their entry points.
 
 ### `RQ2/Optimization-results/`:
     - `llama_reasoning.csv`: For llama, It contains the 400 files, with the original code, optimized code, the reasoning (optimization applied) for each file, and the themes extracted from each file. 
@@ -79,3 +92,8 @@ For each model, it contains the files sent to the models for the optimization. T
 ### `RQ3/Analysis`:
     - `EnergyProcessorStats.ipynb`: Scripts used to perform stastical tests.
     - `EnergyOptimizationProcessor.py`: Scripts used to process optimization results.
+	
+### `RQ3/Correctness`:
+	- `compareOutputs.m`: Script that compares the behavior (console output, HDD file changes, return result) of original and optimized scripts
+	- `two_scripts_are_same.m`: Script called by `compareOutputs.m`
+	- `compareOutput.csv`: Result of the comparison in `compareOutputs.m`
