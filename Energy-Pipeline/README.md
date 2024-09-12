@@ -35,12 +35,12 @@ In our study, the matlab projects were downloaded from GitHub by running the Mat
 ### Scripts to execute
 
 A file containing the list of the paths to scripts to run (and to measure the enrgy consumption of). The format must follow the 1 line = 1 script. 
-As example, the file used to run the Matlab entrypoint files (i.e., original scripts and corresponding LLM optimised scripts) from our study is provided in the `experimentation` folder as `Experimentation_scripts.csv`. It contains relative paths to the `sampling` folder where the Matlab projects were located.
+As example, the file used to run the Matlab entrypoint files (i.e., original scripts and corresponding LLM optimised scripts) from our study is provided in the `src` folder as `Experimentation_scripts.csv`. It contains relative paths to the `sampling` folder where the Matlab projects were located.
 We used the list of entrypoints found previously (and the generated LLMs optimised corresponding scripts) to then create our `Experimentation_scripts.csv` file.
 
 ## Running the experimentation
 
-In `measure.py` line 32, update the `PATH_TO_PROJECT_FOLDER` variable with the absolute path to this specific folder `Energy-Experimentation`.
+In `measure.py` line 32, update the `PATH_TO_PROJECT_FOLDER` variable with the absolute path to this specific folder `Energy-Pipeline`.
 
 To launch the experimentation, i.e., running the Matlab scripts and measuring their energy consumption:
 
