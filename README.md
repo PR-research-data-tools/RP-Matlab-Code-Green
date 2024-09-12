@@ -71,49 +71,49 @@ RQ3/
 ---
 ###  `Energy-Pipeline`
 It provides the pipeline or environment (code and files) for the tool EnergiBridge, which runs and measures the energy consumption of Matlab scripts used in our study.
-    - `README.md`: Describe the content of this folder.
-    - `Dockerfile.toolbox`:  Docker file to isolate the execution of Matlab scripts.
-    - `sampling/`: Clonned GitHub projects are expected to be evaluated.
-    - `output/`: Output files from the tool from the experimentation will be stored here.
-    - `src/`: Original and Optimized version of the files that need to be measured. 
+- `README.md`: Describe the content of this folder.
+- `Dockerfile.toolbox`:  Docker file to isolate the execution of Matlab scripts.
+- `sampling/`: Clonned GitHub projects are expected to be evaluated.
+- `output/`: Output files from the tool from the experimentation will be stored here.
+- `src/`: Original and Optimized version of the files that need to be measured. 
     
 ###  `RQ1`
 The subfolders `Curation Scripts` and `Entry Point Scripts` have their own `README.md` file for further explanation.
 The scripts of these subfolders create the dataset in `Dataset`: a list of our 100 sampled GitHub projects and a list of their entry points.
 
 ### `RQ2/Optimization-results/`:
-    - `llama_reasoning.csv`: For llama, It contains the 400 files, with the original code, optimized code, the reasoning (optimization applied) for each file, and the themes extracted from each file. 
-    - `mixtral_reasoning.csv`: For mixtral, it contains 400 files, including the original code, optimized code, reasoning (optimization applied) for each file, and themes extracted from each file. 
-    - `gpt-3_reasoning.csv`: For gpt-3, It contains the 400 files, with the original code, optimized code, the reasoning (optimization applied) for each file, and themes extracted from each file. 
-    - `gpt-4_reasoning.csv`: For gpt-4, It contains the 400 files, with the original code, optimized code, the reasoning (optimization applied) for each file, and the themes extracted from each file. 
-    - `human_reasoning.csv`: For human optimization, It contains the 60 files, with the original code, optimized code, the reasoning (optimization applied) for each file, and the themes extracted from each file. 
-    - `Human-guidelines.txt`: The developer formed the guidelines for energy optimization.
+- `llama_reasoning.csv`: For llama, It contains the 400 files, with the original code, optimized code, the reasoning (optimization applied) for each file, and the themes extracted from each file. 
+- `mixtral_reasoning.csv`: For mixtral, it contains 400 files, including the original code, optimized code, reasoning (optimization applied) for each file, and themes extracted from each file. 
+- `gpt-3_reasoning.csv`: For gpt-3, It contains the 400 files, with the original code, optimized code, the reasoning (optimization applied) for each file, and themes extracted from each file. 
+- `gpt-4_reasoning.csv`: For gpt-4, It contains the 400 files, with the original code, optimized code, the reasoning (optimization applied) for each file, and the themes extracted from each file. 
+- `human_reasoning.csv`: For human optimization, It contains the 60 files, with the original code, optimized code, the reasoning (optimization applied) for each file, and the themes extracted from each file. 
+- `Human-guidelines.txt`: The developer formed the guidelines for energy optimization.
 
-### `RQ2/Mappings`:
-  - `LLM-themes.csv`: Contains the themes extracted from all models and mapped with high-level themes.
-  - `Human-themes.csv`:  contains the themes extracted from the guidelines and developer experience, also mapped with high-level themes.
+### `RQ2/Mappings/`:
+- `LLM-themes.csv`: Contains the themes extracted from all models and mapped with high-level themes.
+- `Human-themes.csv`:  contains the themes extracted from the guidelines and developer experience, also mapped with high-level themes.
 
-### `RQ2/Analysis`:
-    - `EnergyThemes.py`: Scripts used to extract themes from the optimization results, merge them, and, in the end, plot the results used in the study.
-    - `EnergyOptimizationWithAnyScale.py`: Script to prompt the models (mixtral, and llama) and get the optimized code.
-    - `EnergyOptimizationWithChatGpt.py`: Script to prompt the models (gpt3, and gpt4) and get the optimized code.
+### `RQ2/Analysis/`:
+- `EnergyThemes.py`: Scripts used to extract themes from the optimization results, merge them, and, in the end, plot the results used in the study.
+- `EnergyOptimizationWithAnyScale.py`: Script to prompt the models (mixtral, and llama) and get the optimized code.
+- `EnergyOptimizationWithChatGpt.py`: Script to prompt the models (gpt3, and gpt4) and get the optimized code.
 
 ### `RQ3/Optimization-results/`: 
 For each model, it contains the files sent to the models for the optimization. The optimized files are stored under the column "optimized-code" in the csv files. 
-    - `human/`: Matlab files optimized by human
-    - `processed_results/averages_results.csv`: the results collected from the tool for each model and the baseline.
+- `human/`: Matlab files optimized by human
+- `processed_results/averages_results.csv`: the results collected from the tool for each model and the baseline.
 
 ### `RQ3/EnergiBridge-results/`:
-    - `output-human.zip`: the results from the EnergiBridge (Energy Profiler) for each file optimized by the developer.
-    - `output-LLMs.zip`:  the results from the EnergiBridge (Energy Profiler) for each file optimized by LLMs.
+- `output-human.zip`: the results from the EnergiBridge (Energy Profiler) for each file optimized by the developer.
+- `output-LLMs.zip`:  the results from the EnergiBridge (Energy Profiler) for each file optimized by LLMs.
 
 ### `RQ3/Analysis`:
-    - `EnergyProcessorStats.ipynb`: Scripts used to perform statistical tests.
-    - `EnergyOptimizationProcessor.py`: Scripts used to process optimization results.
-    - `correlation_matrix.pdf`: resulting from correlation analysis.
-    - `effect_sizes_comparison.pdf`: effect sizes measuring for the statistical test.
+- `EnergyProcessorStats.ipynb`: Scripts used to perform statistical tests.
+- `EnergyOptimizationProcessor.py`: Scripts used to process optimization results.
+- `correlation_matrix.pdf`: resulting from correlation analysis.
+- `effect_sizes_comparison.pdf`: effect sizes measuring for the statistical test.
 	
 ### `RQ3/Correctness`:
-	- `compareOutputs.m`: Script that compares the behavior (console output, HDD file changes, return result) of original and optimized scripts
-	- `two_scripts_are_same.m`: Script called by `compareOutputs.m`
-	- `compareOutput.csv`: Result of the comparison in `compareOutputs.m`
+- `compareOutputs.m`: Script that compares the behavior (console output, HDD file changes, return result) of original and optimized scripts
+- `two_scripts_are_same.m`: Script called by `compareOutputs.m`
+- `compareOutput.csv`: Result of the comparison in `compareOutputs.m`
