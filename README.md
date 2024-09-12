@@ -59,6 +59,8 @@ RQ3/
 	Analysis/
 		EnergyProcessorStats.ipynb
 		EnergyOptimizationProcessor.py
+		correlation_matrix.pdf
+		effect_sizes_comparison.pdf
 	Correctness/
 		compareOutputs.m
 		two_scripts_are_same.m
@@ -108,6 +110,8 @@ For each model, it contains the files sent to the models for the optimization. T
 ### `RQ3/Analysis`:
     - `EnergyProcessorStats.ipynb`: Scripts used to perform stastical tests.
     - `EnergyOptimizationProcessor.py`: Scripts used to process optimization results.
+    - `correlation_matrix.pdf`: resulting of correlation anlaysis.
+    - `effect_sizes_comparison.pdf`: effect sizes measuring for the statistical test.
 	
 ### `RQ3/Correctness`:
 	- `compareOutputs.m`: Script that compares the behavior (console output, HDD file changes, return result) of original and optimized scripts
