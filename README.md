@@ -1,12 +1,20 @@
-# Replication Package for `Make Code Green: Evaluating Energy Optimization`
-This repository contains the replication package for the study `Make Code Green: Evaluating Energy Optimization`.
-This staud establishes an automated pipeline to measure the energy footprint of a large set of Matlab projects mined from GitHub, addressing the growing concern of energy consumption in scientific software systems.
-It evaluates whether recent Large Language Models (LLMs) like ChatGPT-3, ChatGPT-4, Mixtral, and LLama can reduce the energy footprints of these software systems, identifying and categorizing 2,176 optimizations suggested by the LLMs.
-The study compares LLM-suggested optimizations with human-proposed ones, assesses their impact on code sustainability through statistical analysis.
+# Replication Package for `Make Code Green: Evaluating Optimizations of LLMs vs Human`
+This repository contains the replication package for the study `Make Code Green: Evaluating Optimizations of LLMs vs Human`.
+In this work, we explore the efficacy of LLMs in reducing the environmental footprint of Matlab scripts mined from GitHub projects, addressing the growing concern of energy consumption.
+We investigate potential energy optimizations recommended by leading LLMs, such as GPT-3, GPT-4, Llama, and Mixtral, and an expert developer. 
+From 400 entry-point scripts across 100 top Matlab projects, we identified 2,176 unique LLM optimizations mapped to 13 high-level themes.
+We evaluate the effects of their optimizations on Matlab code's green capacity (changes in energy consumption, memory usage, execution time consumption, and code correctness).
 
 ## Structure
 ```
-READMe.md
+README.md
+
+Energy-Pipeline/
+	README.md
+	Dockerfile.toolbox
+	output/
+	sampling/
+	src/
 RQ1/
 	Curation Scripts/
 		clone.py
@@ -59,6 +67,14 @@ RQ3/
 
 ## Contents of the Replication Package
 ---
+###  `Energy-Pipeline`
+It provides the pipeline or environment (code and files) for the tool EnergiBridge to run and measure the energy consumption of Matlab scripts, used in our study.
+    - `README.md`: Describe the content of this folder.
+    - `Dockerfile.toolbox`:  Docker file to isolate the execution of Matlab scripts.
+    - `sampling/`: Clonned GitHub projects expected to be evaluted.
+    - `output/`: Output files from the tool from the experimentation will be stored here.
+    - `src/`: Original and Optimized version of the files that need to be measured. 
+    
 ###  `RQ1`
 The subfolders `Curation Scripts` and `Entry Point Scripts` have their own `README.md` file for futher explanation.
 The scripts of these subfolder create the dataset in `Dataset`: a list of our 100 sampled GitHub projects and a list of their entry points.
