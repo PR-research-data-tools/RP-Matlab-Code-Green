@@ -1,4 +1,4 @@
-Here we provide the environement (code, and files) to run and measure the energy consumption of Matlab scripts. We used this pipeline for our study presenting in `Make Code Green: Evaluating Energy Optimization`.
+Here we provide the environement (code, and files) to run and measure the energy consumption of Matlab scripts. We used this pipeline for our study.
 
 
 ## Installation
