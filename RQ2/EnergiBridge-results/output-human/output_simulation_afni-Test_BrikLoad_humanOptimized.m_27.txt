@@ -1,0 +1,24 @@
+[Warning: 
+Error in BrikLoad : HEAD file ARzs_CW_avvr.DEL+orig.HEAD not found
+
+] 
+[> In ErrEval (line 107)
+In BrikLoad (line 527)
+In Test_BrikLoad_humanOptimized (line 32)
+In run (line 91)] 
+[Warning: 
+Error in BrikLoad : HEAD file ARzs_CW_avvr.DEL+orig.HEAD not found
+
+] 
+[> In ErrEval (line 107)
+In BrikLoad (line 527)
+In Test_BrikLoad_humanOptimized (line 34)
+In run (line 91)] 
+[Warning: 
+Error in BrikLoad : HEAD file ARzs_CW_avvr.DEL+orig.HEAD not found
+
+] 
+[> In ErrEval (line 107)
+In BrikLoad (line 527)
+In Test_BrikLoad_humanOptimized (line 36)
+In run (line 91)] 

@@ -1,0 +1,24 @@
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+Running OptimTraj, iteration 1
+  -> Transcription via trapezoid method, nGrid = 100
+      - using analytic gradients of objective function
+      - using analytic gradients of constraint function
+
+Your initial point x0 is not between bounds lb and ub; FMINCON
+shifted x0 to strictly satisfy the bounds.
+
+____________________________________________________________
+   CheckGradients Information
+
+Objective function derivatives:
+Maximum relative difference between supplied 
+and finite-difference derivatives = 9.13186e-09.
+
+Nonlinear equality constraint derivatives:
+Maximum relative difference between supplied 
+and finite-difference derivatives = 5.8919e-09.
+
+CheckGradients successfully passed.
+____________________________________________________________
+
+Undefined function 'getIpOptions' for input arguments of type 'struct'.
